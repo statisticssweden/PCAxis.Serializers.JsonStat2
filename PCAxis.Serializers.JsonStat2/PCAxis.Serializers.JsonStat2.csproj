@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>PCAxis.Serializers.JsonStat2</PackageId>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+    <MinVerDefaultPreReleasePhase>beta</MinVerDefaultPreReleasePhase>
+    <MinVerSkip Condition="'$(Configuration)' == 'Debug'">true</MinVerSkip>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Serializer for json-stat2 format</Description>
     <PackageProjectUrl>https://github.com/statisticssweden/PCAxis.Serializers.JsonStat2</PackageProjectUrl>
@@ -10,7 +14,6 @@
     <PackageTags>PX</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-    <Version>1.0.2</Version>
   </PropertyGroup>
   
   <PropertyGroup>
@@ -20,6 +23,10 @@
 
   <ItemGroup>
     <PackageReference Include="log4net" Version="2.0.12" />
+    <PackageReference Include="MinVer" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="PCAxis.Core" Version="1.0.1" />
     <PackageReference Include="PCAxis.Metadata" Version="1.0.1" />
